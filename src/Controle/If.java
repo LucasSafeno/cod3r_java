@@ -20,7 +20,7 @@ public class If {
 	 
 	 //boolean criterioAprovacao = media < 4.5 && media >= 0;
 	 
-	 if(media < 4.5 && media >= 0)
+	 if(media < 4.5 && media >= 0 )
 		 System.out.println("Reprovado");
 		 
 

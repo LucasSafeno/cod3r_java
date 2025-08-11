@@ -8,12 +8,13 @@ public class Data {
 	int year;
 	
 	Data(){
-		day = 1;
-		month = 1;
-		year = 1970;
+		//day = 1;
+		//month = 1;
+		//year = 1970;
+		this(1,1,1970);
 	}
 	Data(int day, int month, int year){
-		this.day = day;
+		this.day = day; 
 		this.month = month;
 		this.year = year;
 		
@@ -21,7 +22,8 @@ public class Data {
 	
 	
 	String obterDataFormatada() {
-		return String.format("%d/%d/%d", day, month, year);
+		String formato = "%d/%d/%d"; // variavel local
+		return String.format(formato, this.day, month, year);
 	}
 	
 	void imprimirData() {

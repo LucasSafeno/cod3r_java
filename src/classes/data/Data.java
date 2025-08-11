@@ -12,10 +12,10 @@ public class Data {
 		month = 1;
 		year = 1970;
 	}
-	Data(int initialDay, int initialMonth, int initialYear){
-		day = initialDay;
-		month = initialMonth;
-		year = initialYear;
+	Data(int day, int month, int year){
+		this.day = day;
+		this.month = month;
+		this.year = year;
 		
 	}
 	

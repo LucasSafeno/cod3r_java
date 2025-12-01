@@ -7,32 +7,31 @@ public class Usuario {
 	
 	String nome;
 
-	
-	Usuario(String nome){
-		this.nome = nome;
-	}
-	
-	public String toString() {
-		return "Meu nome é " + this.nome + ".";
-	}
-	
-	@Override
-	public int hashCode() {
-		return Objects.hash(nome);
-	}
+    Usuario(String nome){
+        this.nome = nome;
+    }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Usuario other = (Usuario) obj;
-		return Objects.equals(nome, other.nome);
-	}
-	
-	
+    public String toString(){
+        return "Meu nome é " + this.nome;
+    }
 
+    @Override
+    public int hashCode(){
+        return this.nome.length();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Usuario usuario = (Usuario) o;
+        return Objects.equals(nome, usuario.nome);
+    }
+
+
+
+    /*@Override
+    public int hashCode() {
+        return Objects.hashCode(nome);
+    }*/
 }
+
